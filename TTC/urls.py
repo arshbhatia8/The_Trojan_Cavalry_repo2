@@ -3,6 +3,7 @@ from . import views
 #Adding
 urlpatterns=[
     path('',views.index,name="index"),
+    path('sampleSearch',views.searchRequest,name="Search"),
     path('home',views.home,name="home"),
     path('form_Employee',views.form_Employee,name="form"),
     path('EmployeePage',views.employee,name="employee"),

@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from TTC.models import Employee, Employer
 from TTC.form_Employee import NewUser
+from django.db import models
+from django.http import HttpResponse
+from django.core.paginator import Paginator
 # Create your views here.
 
 
@@ -33,5 +36,17 @@ def form_Employee(request):
 
     return render(request, 'form_Employee.html',{'form':form})
 
-def query_result_form(request):
-    
+def searchRequest(request):
+    if request.method == 'POST':
+        Entered_ID=request.POST.get('IDfield',None)
+        # for employees in Employee:
+        #     if employee.Emp_ID == Entered_ID:
+        #         return HttpResponse('employee.Employee_Name')
+        try:
+            user=Employee.objects.get(Emp_ID=Entered_ID)
+            html=("<h1>%s<h1>",user)
+            return HttpResponse(html)
+        except Employee.DoesNotExist:
+            return HttpResponse("No object")
+    else:
+        return render(request, 'sampleSearch.html')

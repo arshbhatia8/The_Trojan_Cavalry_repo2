@@ -12,7 +12,11 @@ class Employer(models.Model):
 
 class Employee(models.Model):
     Employee_Name=models.CharField(max_length=300)
+    
     Employee_PhNo=models.CharField(max_length=400)
-
+    
+    Emp_ID=models.IntegerField()
+    
     def __str__(self):
         return self.Employee_Name
+
