@@ -32,3 +32,6 @@ def form_Employee(request):
             print('ERROR FORM INVALID')
 
     return render(request, 'form_Employee.html',{'form':form})
+
+def query_result_form(request):
+    
