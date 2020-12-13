@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="POST" action="/sampleSearch_Employer">
+        {% csrf_token %}
+        <label for="JobReqd">Job Required</label>
+        <input id="JobReqd" type="text" name="BizModelField">
+        
+        <button type="submit">Upload text</button>
+    </form>
+
+    <table border=2px>
+        <thead>
+            <th>Employer_Name</th>
+            <th>Employer_Contact</th>
+            <th>Employer_Location</th>
+            <th>Employer_Mail</th>
+            <th>Job and Remuneration</th>
+        </thead>   
+        {% for employers in items %}
+        <tr>
+            <td>{{employers.Employer_Name}}</td>
+            <td>{{employers.Employer_PhNo}}</td>
+            <td>{{employers.location}}</td>
+            <td>{{employers.Employer_Email}}</td>
+            <td>{{employers.Employer_BizModel}}</td>
+        </tr>
+        <p></p>
+    {% endfor %} 
+    </table>
+    
+</body>
+</html>
+

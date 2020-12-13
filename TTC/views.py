@@ -50,3 +50,36 @@ def searchRequest(request):
             return HttpResponse("No object")
     else:
         return render(request, 'sampleSearch.html')
+
+def form_Employer(request):
+
+    form = NewEmployer()
+
+    if request.method == "POST":
+        form=NewEmployer(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)
+
+        else:
+            print('ERROR FORM INVALID')
+#'Form' is the dictionary of the Employer elements
+    return render(request, 'form_Employer.html',{'form':form})
+
+
+
+def searchRequest_Employer(request):
+    if request.method == 'POST':
+        Entered_Request=request.POST.get('BizModelField',None)
+        # for employees in Employee:
+        #     if employee.Emp_ID == Entered_ID:
+        #         return HttpResponse('employee.Employee_Name')
+        try:
+            user=Employer.objects.filter(BizModel=Entered_Request)
+            dict_2 = {'items':user}
+            return render(request, 'sampleSearch.html', context=dict_2)
+        except Employer.DoesNotExist:
+            return HttpResponse("No object")
+    else:
+        return render(request, 'sampleSearch_Employer.html')
