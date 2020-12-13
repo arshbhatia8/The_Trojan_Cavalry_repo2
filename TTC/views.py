@@ -38,12 +38,12 @@ def form_Employee(request):
 
 def searchRequest(request):
     if request.method == 'POST':
-        Entered_ID=request.POST.get('IDfield',None)
+        Entered_Request=request.POST.get('JobReqdfield',None)
         # for employees in Employee:
         #     if employee.Emp_ID == Entered_ID:
         #         return HttpResponse('employee.Employee_Name')
         try:
-            user=Employee.objects.filter(Emp_ID=Entered_ID)
+            user=Employee.objects.filter(Emp_Job_Requirement=Entered_Request)
             dict_2 = {'items':user}
             return render(request, 'sampleSearch.html', context=dict_2)
         except Employee.DoesNotExist:

@@ -1,25 +1,41 @@
-{% extends "base.html" %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-<form method="POST" action="/sampleSearch">
-    {% csrf_token %}
-    <input type="number" name="IDfield">
+    <form method="POST" action="/sampleSearch">
+        {% csrf_token %}
+        <label for="JobReqd">Job Required</label>
+        <input id="JobReqd" type="text" name="JobReqdfield">
+        
+        <button type="submit">Upload text</button>
+    </form>
     
-    <button type="submit">Upload text</button>
-</form>
+    
+    <table border=2px>
+        <thead>
+            <th>Appl_Name</th>
+            <th>Appl Ph_No</th>
+            <th>Appl_ID</th>
+            <th>Appl Mail</th>
+            <th>Job Reqd. Desc</th>
+        </thead>   
+        {% for employees in items %}
+        <tr>
+            <td>{{employees.Employee_Name}}</td>
+            <td>{{employees.Employee_PhNo}}</td>
+            <td>{{employees.Emp_ID}}</td>
+            <td>{{employees.Emp_Mail}}</td>
+            <td>{{employees.Emp_Job_Requirement}}</td>
+        </tr>
+        <p></p>
+    {% endfor %} 
+    </table>
+    
+</body>
+</html>
 
-
-<table border=2px>
-    <thead>
-        <th>Emp_Name</th>
-        <th>Emp Ph_No</th>
-    </thead>   
-    {% for employees in items %}
-    <tr>
-        <td>{{employees.Employee_Name}}</td>
-        <td>{{employees.Employee_PhNo}}</td>
-    </tr>
-    <p></p>
-{% endfor %} 
-</table>
-{% endblock body %}

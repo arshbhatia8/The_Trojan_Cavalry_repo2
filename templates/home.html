@@ -14,12 +14,18 @@
         <thead>
             <th>Name</th>
             <th>PhNo</th>
+            <th>Applicant_ID</th>
+            <th>Applicant_Email</th>
+            <th>Description</th>
         </thead>
 
     {%for emp in employee%}
     <tr>
         <td>{{emp.Employee_Name}}</td>
         <td>{{emp.Employee_PhNo}}</td>
+        <td>{{emp.Emp_ID}}<td>
+        <td>{{emp.Emp_Mail}}<td>
+        <td>{{emp.Emp_Job_Requirement}}</td>            
         <p></p>
     </tr>
     {%endfor%}
