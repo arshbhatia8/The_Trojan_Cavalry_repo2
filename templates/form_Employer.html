@@ -1,3 +1,26 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <h1>Lets sign up</h1>
+  <form method="POST">
+      {{form.as_p}} -->
+      <!-- <p><label for ="id_EmployeeName">Employer_Name</label>
+          <input id="id_EmployeeName" name="Employer Name">
+        </p> -->
+      <!-- {%csrf_token%}
+      <input type="submit" name="" value="submit">
+  </form>
+  
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +31,17 @@
 <body>
   <h1>Lets sign up</h1>
   <form method="POST">
-      {{form.as_p}}
-      {%csrf_token%}
+      <p><label for="id_Employer_Name">Employer Name:</label> <input type="text" name="Employer_Name" maxlength="300" required id="id_Employer_Name"></p>
+<p><label for="id_location">Location:</label> <input type="text" name="location" maxlength="300" required id="id_location"></p>
+<p><label for="id_Employer_PhNo">Employer PhNo:</label> <input type="text" name="Employer_PhNo" maxlength="300" required id="id_Employer_PhNo"></p>
+<p><label for="id_Employer_Email">Employer Email:</label> <input type="email" name="Employer_Email" maxlength="300" required id="id_Employer_Email"></p>
+<p><label for="id_Employer_BizModel">Employer BizModel:</label> <input type="text" name="Employer_BizModel" maxlength="300" required id="id_Employer_BizModel"></p>
+      <!-- <p><label for ="id_EmployeeName">Employer_Name</label>
+          <input id="id_EmployeeName" name="Employer Name">
+        </p> -->
+      <input type="hidden" name="csrfmiddlewaretoken" value="Ubmk5hVSm2vqG0putjdNUhgI33Qhelhq85b1FGvfR18jjiiGS9MvHKUnSOCi2ryF">
       <input type="submit" name="" value="submit">
   </form>
   
 </body>
 </html>
-
