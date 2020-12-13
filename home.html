@@ -1,0 +1,22 @@
+<!-- {% extends "base.html" %} -->
+
+<!-- {% block body %} -->
+    <h1>Hello Welcome to page</h1>
+    <!--To eliminate the below tag display-->
+{% if employee %}
+    <table border=5px>
+        <thead>
+            <th>Name</th>
+            <th>PhNo</th>
+        </thead>
+
+    {%for emp in employee%}
+    <tr>
+        <td>{{emp.Employee_Name}}</td>
+        <td>{{emp.Employee_PhNo}}</td>
+        <p></p>
+    </tr>
+    {%endfor%}
+    </table>
+<!-- {% endif %}
+{% endblock body %} -->

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+
+<form method="POST" action="/sampleSearch">
+    {% csrf_token %}
+    <input type="number" name="IDfield">
+    
+    <button type="submit">Upload text</button>
+</form>
+
+
+<table border=2px>
+    <thead>
+        <th>Emp_Name</th>
+        <th>Emp Ph_No</th>
+    </thead>   
+    {% for employees in items %}
+    <tr>
+        <td>{{employees.Employee_Name}}</td>
+        <td>{{employees.Employee_PhNo}}</td>
+    </tr>
+    <p></p>
+{% endfor %} 
+</table>
+{% endblock body %}
