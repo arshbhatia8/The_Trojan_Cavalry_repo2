@@ -8,6 +8,9 @@ from django.core.paginator import Paginator
 # Create your views here.
 
 
+def midway(request):
+    return render(request,'base3.html')
+
 def index(request):
     return render(request,'base.html')
 def home(request):

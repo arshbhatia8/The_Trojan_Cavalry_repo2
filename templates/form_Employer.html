@@ -20,7 +20,7 @@
 </body>
 </html> -->
 
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +36,142 @@
 <p><label for="id_Employer_PhNo">Employer PhNo:</label> <input type="text" name="Employer_PhNo" maxlength="300" required id="id_Employer_PhNo"></p>
 <p><label for="id_Employer_Email">Employer Email:</label> <input type="email" name="Employer_Email" maxlength="300" required id="id_Employer_Email"></p>
 <p><label for="id_Employer_BizModel">Employer BizModel:</label> <input type="text" name="Employer_BizModel" maxlength="300" required id="id_Employer_BizModel"></p>
+       <p><label for ="id_EmployeeName">Employer_Name</label>
+          <input id="id_EmployeeName" name="Employer Name">
+        </p> -->
+      <!-- <input type="hidden" name="csrfmiddlewaretoken" value="Ubmk5hVSm2vqG0putjdNUhgI33Qhelhq85b1FGvfR18jjiiGS9MvHKUnSOCi2ryF">
+      <input type="submit" name="" value="submit">
+  </form>
+  
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Lets sign up</h1>
+  <form method="POST">
+      {{form.as_p}} -->
+      <!-- <p><label for ="id_EmployeeName">Employer_Name</label>
+          <input id="id_EmployeeName" name="Employer Name">
+        </p> -->
+      <!-- {%csrf_token%}
+      <input type="submit" name="" value="submit">
+  </form>
+  
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>EMPLOYER FORM</title>
+                <link rel="stylesheet" href="style.css" type="text/css">
+                <style>
+                    h1 {
+                        color: #f4511e;
+                        font-size: 70px;
+                        margin-left: 100px;
+                        font-family: Helvetica;
+                    }
+                    label{
+                        color: white;
+                    }
+                    input {
+                        background-color: black;
+                        border: 2px solid #f4511e;
+                        border-radius: 30px;
+                        padding: 20px 80px 12px 10px;
+                        font-family: Helvetica;
+                       color: #f4511e;
+                       margin: 20px 50px 20px 50px;
+                       padding: 20px 100px 10px 100px;
+                        
+                    }
+                    
+                    div.sub {
+                         color:  #f4511e;
+                         position: relative;
+                         left: 200px;
+                         top: 15px;
+                
+                    }
+                    label {
+                        font-family: Helvetica;
+                    }
+                    div.register {
+                        position: fixed;
+                        top: 100px;
+                        left: 400px;
+                    }
+                    .button {
+                        border-radius: 30px;
+                        background-color: black;
+                        border: 2px solid #f4511e;
+                        text-align: center;
+                        color: #f4511e;
+                        font-size: 20px;
+                        padding: 15px;
+                        width: 200px;
+                        transition: all 0.5s;
+                        cursor: pointer;
+                        margin-left:500px;
+                      }
+                      
+                      .button span {
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;
+                        transition: 0.5s;
+                      }
+                      
+                      .button span:after {
+                        content: '\00bb';
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                        right: -20px;
+                        transition: 0.5s;
+                      }
+                      
+                      .button:hover  {
+                        font-size: 25px;
+                        background-color: #f4511e;
+                        color: rgb(255, 255, 255);
+                      }
+                      .button:hover span {
+                        padding-right: 25px;
+                        
+                      }
+                      
+                      .button:hover span:after {
+                        opacity: 1;
+                        right: 0;
+                      }
+                  </style>
+            </head>
+<body bgcolor="black">
+  <h1>SIGN UP</h1>
+  <div class="register">
+  <form method="POST">
+      <p><label for="id_Employer_Name">Employer Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="Employer_Name" maxlength="300" required id="id_Employer_Name"></p>
+<p><label for="id_location">Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="location" maxlength="300" required id="id_location"></p>
+<p><label for="id_Employer_PhNo">Employer PhNo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="Employer_PhNo" maxlength="300" required id="id_Employer_PhNo"></p>
+<p><label for="id_Employer_Email">Employer Email: &nbsp;&nbsp; &nbsp;</label> <input type="email" name="Employer_Email" maxlength="300" required id="id_Employer_Email"></p>
+<p><label for="id_Employer_BizModel">Employer BizModel:</label> <input type="text" name="Employer_BizModel" maxlength="300" required id="id_Employer_BizModel"></p>
       <!-- <p><label for ="id_EmployeeName">Employer_Name</label>
           <input id="id_EmployeeName" name="Employer Name">
         </p> -->
       <input type="hidden" name="csrfmiddlewaretoken" value="Ubmk5hVSm2vqG0putjdNUhgI33Qhelhq85b1FGvfR18jjiiGS9MvHKUnSOCi2ryF">
-      <input type="submit" name="" value="submit">
+      <div class="sub"><button class="button">SUBMIT</button></div>
   </form>
-  
+  </div>div>
 </body>
 </html>

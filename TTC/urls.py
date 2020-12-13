@@ -3,6 +3,7 @@ from . import views
 #Adding
 urlpatterns=[
     path('',views.index,name="index"),
+    path('midway',views.midway,name="midway"),
     path('sampleSearch',views.searchRequest,name="Search"),
     path('sampleSearch_Employer',views.searchRequest_Employer,name="SearchEmployer"),
     path('home',views.home,name="home"),
