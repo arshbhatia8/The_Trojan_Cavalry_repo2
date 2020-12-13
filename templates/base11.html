@@ -2,11 +2,9 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    
-    
     .button {
         border-radius: 12px;
-        background-color: black;
+        background-color: white;
         border: 2px solid #f4511e;
         text-align: center;
         color: #f4511e;
@@ -15,7 +13,7 @@
         width: 200px;
         transition: all 0.5s;
         cursor: pointer;
-        margin-right:150px;
+        margin-right: 100px;
       }
       
       .button span {
@@ -37,7 +35,7 @@
       .button:hover  {
         padding-right: 25px;
         background-color: #f4511e;
-        color: rgb(255, 255, 255);
+        color: white;
       }
       .button:hover span {
         padding-right: 25px;
@@ -50,7 +48,7 @@
       }
     .button1 {
             border-radius: 12px;
-            background-color: black;
+            background-color: white;
             border: 2px solid #f5c400;
             text-align: center;
             color: #f5c400;
@@ -92,52 +90,21 @@
             opacity: 1;
             right: 0;
           }
-          div.center {
-            position: fixed;
-            right: 0px;
-            left: 450px;
-            top: 400px;
-          }
-          div.text {
-            position: fixed;
-            right: 0px;
-            left: 450px;
-            top: 150px;
-          }
-           p {
-              color: white; 
-              font-family: "Lucida Console", "Courier New", monospace;
-               font-size: 50px;}
-    
-          
-           div.ani {
-            width: 8px; 
-            height: 60px;
-            background-color: red;
-            position: relative;
-            animation-name: anima;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-          }
-          @keyframes anima {
-            0%   {background-color:red; left:935px; top:250px;width: 8px; height: 8px;}
-            25%  {background-color:yellow; left:935px; top:250px;width: 8px; height: 60px;}
-            50%  {background-color:blue; lleft:935px; top:250px;width: 8px; height: 30px;}
-            75%  {background-color:green; left:935px; top:250px;width: 8px; height: 60px;}
-            100% {background-color:red; left:935px; top:250px;width: 8px; height: 8px;}
-          }
-           }
+       div.center {
+        position: relative;
+        left: 450px;
+        top: 400px;
+
+       }
     </style>
     </head>
-    <body bgcolor="black">
-    <div class="ani"></div>
-    <div class="text">
-    <p>   Welcome To The </p>
-      <p> Blah, Blah, Blah.</p>
-      </div>
+    
+
+    <body>
     <div class="center">
-        <!-- href="file:///D:/rough/tcavalry.html" -->
-    <a><button class="button"><span>Employers </span></button></a>
-    <a href="/home"><button class="button1"><span>Employees</span></button></a>
+    <button class="button"><span>Eempoloiyers </span></button>
+    <button class="button1"><span><a href="/home">Empoloyees</a></span></button>
+    <a href="/sampleSearch" target="_blank">Click kijie</a>
     </div>
+    </body>
 </html>
