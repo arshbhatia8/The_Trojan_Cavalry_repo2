@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYER FORM</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        h2 {
+            color: #f4511e;
+            font-size: 50px;
+            margin-left: 450px;
+            font-family: Helvetica;
+        }
+        label{
+            color: white;
+        }
+        input {
+            background-color: black;
+            border: 2px solid #f4511e;
+            border-radius: 30px;
+            padding: 20px 80px 12px 10px;
+            font-family: Helvetica;
+           color: #f4511e;
+           margin: 20px 50px 20px 50px;
+           padding: 20px 100px 10px 100px;
+            
+        }
+        
+        div.sub {
+             color:  #f4511e;
+             position: relative;
+             left: 150px;
+             top: 20px;
+    
+        }
+        label {
+            font-family: Helvetica;
+        }
+        div.register {
+            position: fixed;
+            top: 150px;
+            left: 150px;
+        }
+        .button {
+            border-radius: 30px;
+            background-color: black;
+            border: 2px solid #f4511e;
+            text-align: center;
+            color: #f4511e;
+            font-size: 20px;
+            padding: 15px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin-left:500px;
+          }
+          
+          .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          
+          .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          
+          .button:hover  {
+            font-size: 25px;
+            background-color: #f4511e;
+            color: rgb(255, 255, 255);
+          }
+          .button:hover span {
+            padding-right: 25px;
+            
+          }
+          
+          .button:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+      </style>
+</head>
+
+<body bgcolor="black">
+    <div class ="main">
+        <h2> EMPLOYER REGISTRATION</h2>
+        <div class = "register">
+        
+        <form id= "register" method ="post">
+         <label> ORGANISATION NAME : </label> 
+         
+         <input type ="text" name="oname"
+         id= "name" placeholder ="Eg. John Doe Industries">
+         
+         <label> FOUNDER'S NAME:</label>
+         
+         <input type ="text" name="fname"
+         id= "name" placeholder ="Eg. Mr. John Doe">
+         <br><br>
+         <label> TYPE OF BUISNESS:</label>
+         
+         <input type ="text" name="tname"
+         id= "name" placeholder ="Eg. Pharma">
+         
+         <label> YEAR OF ESTABLISHMENT:</label>
+         
+         <input type ="number" name="year"
+         id= "name" placeholder ="Eg. 1990">
+         <br><br>
+         <label> EMAIL:</label>
+         
+         <input type ="email" name="email"
+         id= "name" placeholder ="Eg. johndoe@gmail.com">
+         
+         <label> LOCATION:</label>
+         
+         <input type ="text" name="Lname"
+         id= "name" placeholder ="Eg. Kolkata">
+         <br><br>
+         <label> COMPANY SIZE:</label>
+        
+         <input type ="text" name="csname"
+         id= "name" placeholder ="Eg. mid-cap company">
+         
+         <label> ORGANISATION DESCRIPTION:</label>
+         
+         <input type ="text" name="csname"
+         id= "name" placeholder ="A brief description of your company ">
+         <br><br>
+         <br>
+         <button class="button">SUBMIT</button>
+
+        
+
+        </form>  
+
+    </div>
+</div>
+      
+</body>
+</html>
