@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from TTC.models import Employee, Employer
 from TTC.form_Employee import NewUser
+from TTC.form_Employer import NewEmployer
 from django.db import models
 from django.http import HttpResponse
 from django.core.paginator import Paginator
@@ -53,19 +54,18 @@ def searchRequest(request):
 
 def form_Employer(request):
 
-    form = NewEmployer()
+    form1 = NewEmployer()
 
     if request.method == "POST":
-        form=NewEmployer(request.POST)
+        form1=NewEmployer(request.POST)
 
-        if form.is_valid():
-            form.save(commit=True)
+        if form1.is_valid():
+            form1.save(commit=True)
             return index(request)
 
         else:
             print('ERROR FORM INVALID')
-#'Form' is the dictionary of the Employer elements
-    return render(request, 'form_Employer.html',{'form':form})
+    return render(request, 'form_Employer.html',{'form':form1})
 
 
 
