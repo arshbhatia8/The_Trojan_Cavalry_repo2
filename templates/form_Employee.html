@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,30 @@
   <form method="POST">
       {{form.as_p}}
       {%csrf_token%}
+      <input type="submit" name="" value="submit">
+  </form>
+  
+</body>
+</html>
+ -->
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Lets sign up</h1>
+  <form method="POST">
+      <p><label for="id_Employee_Name">Employee Name:</label> <input type="text" name="Employee_Name" maxlength="300" required id="id_Employee_Name"></p>
+<p><label for="id_Employee_PhNo">Employee PhNo:</label> <input type="text" name="Employee_PhNo" maxlength="400" required id="id_Employee_PhNo"></p>
+<p><label for="id_Emp_ID">Emp ID:</label> <input type="number" name="Emp_ID" required id="id_Emp_ID"></p>
+<p><label for="id_Emp_Mail">Emp Mail:</label> <input type="email" name="Emp_Mail" maxlength="300" required id="id_Emp_Mail"></p>
+<p><label for="id_Emp_Job_Requirement">Emp Job Requirement:</label> <input type="text" name="Emp_Job_Requirement" maxlength="400" required id="id_Emp_Job_Requirement"></p>
+      <input type="hidden" name="csrfmiddlewaretoken" value="9TfsCxzkI7L809pg4mRsL6ZjKVvnaf0InN49cW9Hd6o1DristcqayzDYzGhoYlhX">
       <input type="submit" name="" value="submit">
   </form>
   
