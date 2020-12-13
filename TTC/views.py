@@ -43,9 +43,9 @@ def searchRequest(request):
         #     if employee.Emp_ID == Entered_ID:
         #         return HttpResponse('employee.Employee_Name')
         try:
-            user=Employee.objects.get(Emp_ID=Entered_ID)
-            html=("<h1> HELLO1 <h1>", user)
-            return HttpResponse(html)
+            user=Employee.objects.filter(Emp_ID=Entered_ID)
+            dict_2 = {'items':user}
+            return render(request, 'sampleSearch.html', context=dict_2)
         except Employee.DoesNotExist:
             return HttpResponse("No object")
     else:

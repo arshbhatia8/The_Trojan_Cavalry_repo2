@@ -6,11 +6,20 @@
     <input type="number" name="IDfield">
     
     <button type="submit">Upload text</button>
-    </form>
-<!-- {% for employees in items %}
-{% if employees.Emp_ID == Entered_ID %}
-{{employees.Employee_Name}}<p></p>
-{% endif %}
-{% endfor %}
-   -->
+</form>
+
+
+<table border=2px>
+    <thead>
+        <th>Emp_Name</th>
+        <th>Emp Ph_No</th>
+    </thead>   
+    {% for employees in items %}
+    <tr>
+        <td>{{employees.Employee_Name}}</td>
+        <td>{{employees.Employee_PhNo}}</td>
+    </tr>
+    <p></p>
+{% endfor %} 
+</table>
 {% endblock body %}
